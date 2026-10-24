@@ -1,0 +1,17 @@
+START HERE — MAC (GOOGLE GEMINI VERSION)
+========================================
+
+1. Extract this ZIP completely.
+2. Open the extracted syllabus-ai-agent-gemini folder.
+3. Double-click "Start Syllabus AI Agent.command".
+4. The first run may take a few minutes while packages install.
+5. When prompted, paste your Google AI Studio Gemini API key. Terminal will not display the key as you type/paste. Press Return after pasting.
+6. The app should open at http://127.0.0.1:8000.
+7. Keep Terminal open while using the app. Press Control+C to stop it.
+
+Create a key at https://aistudio.google.com/apikey. Paste it exactly as provided; do not add or remove a prefix.
+
+If the app does not prompt for a key, open Terminal in this folder and run: nano .env
+Set GEMINI_API_KEY=your_exact_key and save (Control+O, Return, Control+X), then restart the app.
+
+This is a local web app launcher, not a compiled Mac .app. It does not connect to Gmail or send emails. It sends the syllabus text and pasted email to the Gemini API. Do not test with sensitive student information.

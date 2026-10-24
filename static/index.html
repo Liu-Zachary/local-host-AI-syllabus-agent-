@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Syllabus AI Agent — Gemini</title>
+  <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+  <main class="shell">
+    <header class="hero">
+      <div class="eyebrow">LOCAL WEB APP · GEMINI EDITION</div>
+      <h1>Syllabus AI Agent</h1>
+      <p>Upload a syllabus and check whether a student's email can be answered from it.</p>
+    </header>
+    <section class="notice"><strong>Review before sending.</strong> This prototype does not connect to your mailbox or send emails. It analyzes text you provide and generates a draft or flags the question for human review.</section>
+    <form id="analyze-form" class="panel">
+      <label for="syllabus">Course syllabus (PDF)</label>
+      <input id="syllabus" name="syllabus_file" type="file" accept="application/pdf,.pdf" required>
+      <p class="hint">PDF must contain selectable text; scanned PDFs are not supported yet. Maximum 15 MB.</p>
+      <label for="email">Student email</label>
+      <textarea id="email" name="email_text" rows="8" maxlength="15000" placeholder="Paste a fictional test email here…" required></textarea>
+      <button id="submit-button" type="submit">Analyze email with Gemini</button>
+      <p id="status" class="status" role="status" aria-live="polite"></p>
+    </form>
+    <section id="result" class="panel result hidden" aria-live="polite">
+      <div class="result-heading"><h2>Analysis</h2><span id="action-badge" class="badge"></span></div>
+      <h3>Suggested response / next step</h3><pre id="answer"></pre>
+      <h3>Reason</h3><p id="reason"></p>
+      <h3>Syllabus evidence</h3><pre id="evidence"></pre>
+      <button id="copy-button" class="secondary" type="button">Copy response</button>
+    </section>
+    <footer>Privacy tip: use only data you are authorized to process. The syllabus and email text are sent to Google Gemini for analysis; this prototype does not save them to a local database. Use fictional test emails initially.</footer>
+  </main>
+  <script src="/static/app.js"></script>
+</body>
+</html>
