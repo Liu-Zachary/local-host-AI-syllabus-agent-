@@ -1,6 +1,6 @@
 # Syllabus AI Agent — Google Gemini Edition
 
-testing vibe coding 
+
 
 
 A local-first web app prototype that accepts a syllabus PDF and pasted student email, then asks Google Gemini to either suggest a syllabus-supported draft or flag the question for human review.
